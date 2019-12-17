@@ -1,0 +1,40 @@
+{
+  "rulesDirectory": [],
+  "extends": "tslint:all",
+  "rules": {
+    "indent": [true, "spaces", 2],
+    "interface-name": false,
+    "typedef": false,
+    "no-console": false,
+    "completed-docs": false,
+    "quotemark": [true, "single"],
+    "object-literal-sort-keys": [
+      false,
+      "match-declaration-order-only",
+      "shorthand-first"
+    ],
+    "member-access": [true, "no-public"],
+    "member-ordering": false,
+    "no-parameter-properties": false,
+    "file-name-casing": [true, "kebab-case"],
+    "no-submodule-imports": [true, "rxjs", "native", "core-js"],
+    "newline-per-chained-call": false,
+    "no-implicit-dependencies": false,
+    "no-use-before-declare": false,
+    "variable-name" : {
+      "options": [
+        "check-format",
+        "allow-leading-underscore",
+        "ban-keywords",
+        "require-const-for-all-caps"
+      ]
+    },
+    "prefer-method-signature": false,
+    "prefer-function-over-method": [ true, "allow-public" ],
+    "no-async-without-await": false,
+    "invalid-void": false
+  },
+  "linterOptions": {
+    "exclude": ["**/__generated__/**"]
+  }
+}
