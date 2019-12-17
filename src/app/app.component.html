@@ -1,9 +1,29 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!--
+  Here is the template for the example Angular app content that you've seen on your browser.
+  You may recognize most of it as plain HTML, with some caveats: firstly, it is not a complete
+  html but only a fragment, this is because it doesn't represent the whole page but only a widget
+  (although in this case the widget is enlarged full size on the page), secondly there are some
+  {{}} that are likely template expression.
+
+  And indeed they are: the expression inside {{}} are evaluated in a small subset of javascript
+  and names are resolved in the context of the view model class. Try it, put your name as {{author}}
+  somewhere in the page.
+-->
 <div style="text-align:center" class="content">
   <h1>
     Welcome to {{title}}!
   </h1>
   <span style="display: block">{{ title }} app is running!</span>
+<!--
+  The {{}} templates do work inside text nodes of the html, however if you want to set an attribute such as
+  'alt', the alternative text for the image, you'll find that simply replacing with {{}} is not enough.
+  Attributes can be bound as a whole to an expression by using the following syntax
+  <img width="300" [alt]="imageAltText" src="..."/>
+  enclosing an attribute in square bracket will make the compiler interpret the associated text as an 
+  expression to evaluate each time the viewmodel changes to obtain the correct expression to evaluate.
+  Set it to "imageAltText" as in the example above, then commit your changes and run "git pull --rebase"
+  and open the file 'clock.component.ts' to continue with the tutorial.
+-->
   <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
 <h2>Here are some links to help you start: </h2>
@@ -18,3 +38,6 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
+<!--
+  Do not modify this comment, and do not add anything below it
+-->
