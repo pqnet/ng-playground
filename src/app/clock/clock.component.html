@@ -1,0 +1,13 @@
+<!--
+  This is an example of a pipe.
+  If you remember correctly, the type of the `clockFace` variable is not a string, but
+  an Observable<string>, and in order to display its most recent value we need to implement (and manage)
+  a subscription and a variable that caches its last value.
+
+  The `async` pipe does exactly that. It is declared in the core angular module
+  and it takes the value to the left of the '|' and subscribe to it, updating the value shown every time the observable changes
+  Now go check the changes in app.component.html
+-->
+<div>
+  <p>{{clockFace|async}}</p>
+</div>

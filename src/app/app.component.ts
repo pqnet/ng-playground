@@ -19,9 +19,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls : [],
+  styleUrls : ['app.component.css'],
 })
 export class AppComponent {
   title = 'ng-playground';
   // Do not modify this comment, and everything after it
+  clockShown = true;
 }

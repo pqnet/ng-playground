@@ -1,0 +1,7 @@
+app-clock {
+  position: fixed;
+  height: 3em;
+  width: 10em;
+  right: 10px;
+  top: 10px;
+}
