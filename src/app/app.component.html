@@ -41,3 +41,18 @@
 <!--
   Do not modify this comment, and do not add anything below it
 -->
+<!--
+  Here we use a structural directive to show either one or the other content based on the value of a variable.
+  *ngIf takes an expression and show the element and its content only if the condition is true
+  To have a else branch we just add another *ngIf with the opposite condition.
+  `clockShown` is just another boolean public variable in the view model, initialized as true.
+  Go check it.
+-->
+<div *ngIf="clockShown">
+  <!-- This is another type of binding, which works in the opposite direction -->
+  <button (click)="clockShown = false">Hide clock</button>
+  <app-clock></app-clock>
+</div>
+<div *ngIf="!clockShown">
+  <button (click)="clockShown = true">Show clock</button>
+</div>

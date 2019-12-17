@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ClockService } from './clock.service';
+import { ClockComponent } from './clock/clock.component';
 
 /*
   Here we see a typescript decorator. A Decorator is a function that is executed right after defining an entry, and can
@@ -10,11 +12,12 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
+    ClockComponent,
   ],
   imports: [
     BrowserModule,
   ],
-  providers: [],
+  providers: [ClockService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
